@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<design>
+	<namespaces>
+		<namespace prefix="fs" uri="library://ns.flex.org/flexshortcut"/>
+	</namespaces>
+	
+	<categories>
+		<category id="utils" label="shortcut" defaultExpand="true"/>
+	</categories>
+
+	<components>
+	    <component id="org.flexshortcut.Shortcut" name="Shortcut" category="utils" namespace="fs"/>
+	    <component id="org.flexshortcut.BindKey" name="BindKey" category="utils" namespace="fs"/>
+	</components>
+</design>

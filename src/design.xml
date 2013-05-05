@@ -10,7 +10,7 @@
 	</categories>
 
 	<components>
-	    <component id="org.flexshortcut.Shortcut" name="Shortcut" category="utils" namespace="fs"/>
-	    <component id="org.flexshortcut.BindKey" name="BindKey" category="utils" namespace="fs"/>
+	    <component id="org.flexshortcut.core.ShortcutKey" name="ShortcutKey" category="utils" namespace="fs"/>
+	    <component id="org.flexshortcut.core.BindingKey" name="BindingKey" category="utils" namespace="fs"/>
 	</components>
 </design>

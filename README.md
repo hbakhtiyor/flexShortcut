@@ -9,10 +9,23 @@
 ```mxml
 <fx:Declarations>
 	<fs:Shortcut>
-		<fs:shortcuts>		
+		<fs:shortcuts>
+			<s:ArrayList>		
+				<fs:BindKey target="{newButton}" ctrl="true" key="{Keyboard.N}"/>
+				<fs:BindKey target="{closeButton}" ctrl="true" key="{Keyboard.Q}"/>
+			</s:ArrayList>
+		</fs:shortcuts>	
+	</fs:Shortcut>
+</fx:Declarations>
+```
+
+```mxml
+<fx:Declarations>
+	<fs:Shortcut>
+		<s:ArrayList>		
 			<fs:BindKey target="{newButton}" ctrl="true" key="{Keyboard.N}"/>
 			<fs:BindKey target="{closeButton}" ctrl="true" key="{Keyboard.Q}"/>
-		</fs:shortcuts>	
+		</s:ArrayList>
 	</fs:Shortcut>
 </fx:Declarations>
 ```

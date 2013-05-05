@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
   <includeClasses>
-    <classEntry path="org.flexshortcut.BindKey"/>
-    <classEntry path="org.flexshortcut.Shortcut"/>
+    <classEntry path="org.flexshortcut.core.BindingKey"/>
+    <classEntry path="org.flexshortcut.core.ShortcutKey"/>
+    <classEntry path="org.flexshortcut.utils.StringUtil"/>
+    <classEntry path="org.flexshortcut.utils.KeyNamesUtil"/>
   </includeClasses>
   <includeResources>
     <resourceEntry destPath="design.xml" sourcePath="design.xml"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
 <componentPackage>
-    <component id="Shortcut" class="org.flexshortcut.Shortcut"/>
-    <component id="BindKey" class="org.flexshortcut.BindKey"/>
+    <component id="ShortcutKey" class="org.flexshortcut.core.ShortcutKey"/>
+    <component id="BindingKey" class="org.flexshortcut.core.BindingKey"/>
 </componentPackage>

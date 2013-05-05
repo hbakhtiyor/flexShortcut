@@ -1,0 +1,24 @@
+* Add Alt+<letter> shortcut support. e.g. ̲File -> Alt+F
+* Add callback handler for shortcut. (handler property)
+* Add event and eventType properties for dispatch custom event. (by default event=MouseEvent, eventType="click")
+* Add common settings for binding keys. (ctrl, alt, shift, event, eventType and showKeysTip properties)
+	e.g.
+	<fs:Shortcut ctrl="true" eventType="click" showKeysTip="true">
+		<s:ArrayList>		
+			<fs:BindKey target="{newButton}" key="{Keyboard.N}"/>
+			<fs:BindKey target="{closeButton}" key="{Keyboard.Q}"/>
+		</s:ArrayList>
+	</fs:Shortcut>
+	
+	instead of
+		
+	<fs:Shortcut>
+		<s:ArrayList>		
+			<fs:BindKey target="{newButton}" ctrl="true" key="{Keyboard.N}" showKeysTip="true" eventType="click" />
+			<fs:BindKey target="{closeButton}" ctrl="true" key="{Keyboard.Q}" showKeysTip="true" eventType="click" />
+		</s:ArrayList>
+	</fs:Shortcut>
+	
+* Add unit tests.
+* Add demonstration application. (in /example folder)
+* Improve README file.	

@@ -9,6 +9,6 @@ package org.flexshortcut
 {
 	public class Version
 	{	
-		public static const VERSION:String = "0.1.0.alpha";
+		public static const VERSION:String = "0.1.0";
 	}
 }

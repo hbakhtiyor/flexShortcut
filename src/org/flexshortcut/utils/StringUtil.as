@@ -10,6 +10,7 @@ package org.flexshortcut.utils
 	/**
 	 * StringUtil class 
 	 */
+	[ExcludeClass]
 	public class StringUtil
 	{
 		

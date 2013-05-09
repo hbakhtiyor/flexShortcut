@@ -12,6 +12,7 @@ package org.flexshortcut.utils
 	/**
 	 * KeyNamesUtil class 
 	 */
+	[ExcludeClass]
 	public class KeyNamesUtil
 	{
 		

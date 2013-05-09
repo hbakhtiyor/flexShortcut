@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (c) 2013 Abd ar-Rahman (bakhtiyor.h@gmail.com)
+
+Released under the "MIT" license
+
+See LICENSE.txt for full license information.
+-->
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
+			   xmlns:s="library://ns.adobe.com/flex/spark"
+			   xmlns:mx="library://ns.adobe.com/flex/mx"
+			   xmlns:fs="library://ns.flex.org/flexshortcut"
+			   minWidth="955" minHeight="600"
+			   creationComplete="onApplicationCreationCompleted(event)">
+	<fx:Script>
+		<![CDATA[
+			import mx.events.CloseEvent;
+			import mx.events.FlexEvent;
+			import mx.managers.PopUpManager;
+			
+			import spark.components.TitleWindow;
+			
+			[Bindable]
+			private var window:TitleWindow;
+			
+			protected function onApplicationCreationCompleted(event:FlexEvent):void
+			{
+				setFocus();
+			}
+			
+			protected function onShowWindowButtonClicked(event:Event):void
+			{
+				if(window) return;
+				window = new TitleWindow();
+				window.addEventListener(CloseEvent.CLOSE, onWindowClosed);
+				window.setStyle("skinClass", TitleWindowSkin);
+				window.title = "Demo Window";
+				PopUpManager.addPopUp(window, this, true);
+				PopUpManager.centerPopUp(window);
+				window.setFocus();
+			}
+			
+			protected function onWindowClosed(event:Event):void
+			{
+				window.removeEventListener(CloseEvent.CLOSE, onWindowClosed);
+				PopUpManager.removePopUp(window);
+				window = null;
+			}
+			
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<fs:ShortcutKey>
+			<s:ArrayList>
+				<!-- by default event and eventType are MouseEvent.CLICK -->
+				<fs:BindingKey id="key" ctrl="true"  keyEquivalent="S" target="{showWindowButton}"/>
+				<!-- or with handler property -->
+				<!-- <fs:BindingKey id="key" ctrl="true" keyEquivalent="S" target="{showWindowButton}" handler="onShowWindowButtonClicked"/> -->
+				<!-- or with keyCode property -->
+				<!-- <fs:BindingKey id="key" ctrl="true" shift="true" keyCode="{Keyboard.S}" target="{showWindowButton}"/> -->
+			</s:ArrayList>
+		</fs:ShortcutKey>
+	</fx:Declarations>
+	
+	<s:VGroup horizontalAlign="center" horizontalCenter="0" verticalAlign="middle" verticalCenter="0">
+		<s:Label paddingLeft="10" paddingRight="10"
+				 text="{'Press `' + key + '` key to show the window'}"/>		
+		<s:Button id="showWindowButton" label="Show" click="onShowWindowButtonClicked(event)"
+				  toolTip="Show Window"/>
+		
+		<s:ToggleButton id="toggleButton"
+						label="{toggleButton.selected ? 'Hide Keys ToolTip' : 'Show Keys ToolTip'}"
+						click="{key.showKeysTip=!key.showKeysTip}" selected="{key.showKeysTip}"/>
+		
+		<s:Button label="Change button's toolTip" click="{showWindowButton.toolTip='Display Window'}"/>
+	</s:VGroup>
+</s:Application>

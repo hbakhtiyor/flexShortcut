@@ -559,9 +559,14 @@ package org.flexshortcut.core
 		//  Overridden methods
 		//
 		//--------------------------------------------------------------------------
+		
 		/**
 		 *  @private
 		 */
+		override public function toString():String
+		{
+			return KeyNamesUtil.createShortcutString(_keyCode, _ctrl, _shift, _alt);
+		}
 		
 		//--------------------------------------------------------------------------
 		//
@@ -614,7 +619,7 @@ package org.flexshortcut.core
 		{
 			if(toolTipManager && _keyCode)
 			{
-				var shortcutString:String = " (" + KeyNamesUtil.createShortcutString(_keyCode, _ctrl, _shift, _alt) + ")";
+				var shortcutString:String = " (" + toString() + ")";
 				
 				var toolTip:String = toolTipManager.toolTip || "";
 				if(toolTip.indexOf(shortcutString) == -1 && _showKeysTip)

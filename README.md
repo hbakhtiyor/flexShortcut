@@ -1,45 +1,73 @@
 # Flex Shortcut Manager
 
-
+Binding shortcut keys in your application.
 
 ## Usage
 
 [*Demonstration Application*](https://github.com/hbakhtiyor/flexShortcut/tree/master/example/FlexShortcutDemo)
 
+Declarations
+
 ```mxml
 <fx:Declarations>
-	<fs:Shortcut>
+	<fs:ShortcutKey>
 		<fs:shortcuts>
 			<s:ArrayList>		
-				<fs:BindKey target="{newButton}" ctrl="true" key="{Keyboard.N}"/>
-				<fs:BindKey target="{closeButton}" ctrl="true" key="{Keyboard.Q}"/>
+				<fs:BindingKey target="{newButton}" ctrl="true" keyCode="{Keyboard.N}"/>
+				<fs:BindingKey target="{closeButton}" ctrl="true" keyCode="{Keyboard.Q}"/>
 			</s:ArrayList>
 		</fs:shortcuts>	
-	</fs:Shortcut>
+	</fs:ShortcutKey>
 </fx:Declarations>
 ```
 
+or without `shortcuts` property.
+
 ```mxml
 <fx:Declarations>
-	<fs:Shortcut>
+	<fs:ShortcutKey>
 		<s:ArrayList>		
-			<fs:BindKey target="{newButton}" ctrl="true" key="{Keyboard.N}"/>
-			<fs:BindKey target="{closeButton}" ctrl="true" key="{Keyboard.Q}"/>
+			<fs:BindingKey target="{newButton}" ctrl="true" keyCode="{Keyboard.N}"/>
+			<fs:BindingKey target="{closeButton}" ctrl="true" keyCode="{Keyboard.Q}"/>
 		</s:ArrayList>
-	</fs:Shortcut>
+	</fs:ShortcutKey>
 </fx:Declarations>
 ```
 
-`keyEquivalent` property
+Binding key using letter instead of key code with `keyEquivalent` property.
 
 ```mxml
 <fx:Declarations>
-	<fs:Shortcut>
+	<fs:ShortcutKey>
 		<s:ArrayList>		
-			<fs:BindKey target="{newButton}" ctrl="true" keyEquivalent="n"/>
-			<fs:BindKey target="{closeButton}" ctrl="true" keyEquivalent="q"/>
+			<fs:BindingKey target="{newButton}" ctrl="true" keyEquivalent="n"/>
+			<fs:BindingKey target="{closeButton}" ctrl="true" keyEquivalent="q"/>
 		</s:ArrayList>
-	</fs:Shortcut>
+	</fs:ShortcutKey>
+</fx:Declarations>
+```
+
+Upper-case letter automatically to enable shift-key modifier. e.g. `Ctrl+Shift+T`
+
+```mxml
+<fx:Declarations>
+	<fs:ShortcutKey>
+		<s:ArrayList>		
+			<fs:BindingKey target="{pinButton}" ctrl="true" keyEquivalent="T"/>
+		</s:ArrayList>
+	</fs:ShortcutKey>
+</fx:Declarations>
+```
+
+Handle shortcut key with `handler` property.
+
+```mxml
+<fx:Declarations>
+	<fs:ShortcutKey>
+		<s:ArrayList>		
+			<fs:BindingKey target="{newButton}" ctrl="true" keyEquivalent="n" handler="onNewButtonClicked"/>
+		</s:ArrayList>
+	</fs:ShortcutKey>
 </fx:Declarations>
 ```
 

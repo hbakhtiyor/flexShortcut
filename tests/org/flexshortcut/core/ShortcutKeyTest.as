@@ -5,15 +5,15 @@
 //
 // See LICENSE.txt for full license information.
 ////////////////////////////////////////////////////////////////////////////////
-package org.flexshortcut
+package org.flexshortcut.core
 {
 	import org.flexunit.asserts.fail;
 	
 
 	/**
-	 * BindKeyTest class 
+	 * ShortcutKeyTest class 
 	 */
-	public class BindKeyTest
+	public class ShortcutKeyTest
 	{
 		
 		//--------------------------------------------------------------------------

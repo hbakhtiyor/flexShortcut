@@ -7,8 +7,8 @@
 ////////////////////////////////////////////////////////////////////////////////
 package org.flexshortcut.test
 {
-	import org.flexshortcut.BindKeyTest;
-	import org.flexshortcut.ShortcutTest;
+	import org.flexshortcut.core.BindingKeyTest;
+	import org.flexshortcut.core.ShortcutKeyTest;
 	
 
 	/**
@@ -25,8 +25,8 @@ package org.flexshortcut.test
 		//
 		//--------------------------------------------------------------------------
 		
-		public var util1:org.flexshortcut.ShortcutTest;
-		public var util2:org.flexshortcut.BindKeyTest;
+		public var util1:org.flexshortcut.core.ShortcutKeyTest;
+		public var util2:org.flexshortcut.core.BindingKeyTest;
 
 	}
 }

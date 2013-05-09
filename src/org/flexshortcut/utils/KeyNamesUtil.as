@@ -21,7 +21,6 @@ package org.flexshortcut.utils
 		//
 		//--------------------------------------------------------------------------
 
-		
 		/**
 		 * 	 
 		 * 	Delimiting control keys (ctrl, alt, shift) and keyboard key
@@ -320,15 +319,13 @@ package org.flexshortcut.utils
 		KeyNamesUtil[Keyboard.Y] 					= Y;
 		KeyNamesUtil[Keyboard.YELLOW] 				= YELLOW;
 		KeyNamesUtil[Keyboard.Z] 					= Z;
-		
-		
-		
 	
 		//--------------------------------------------------------------------------
 		//
 		//  Methods
 		//
 		//--------------------------------------------------------------------------
+		
 		/**
 		 * Creates a text representation for shortcut with keys.
 		 *

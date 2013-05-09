@@ -1,6 +1,24 @@
-* Add Alt+<letter> shortcut support. e.g. ̲File -> Alt+F
-* Add callback handler for shortcut. (handler property)
-* Add event and eventType properties for dispatch custom event. (by default event=MouseEvent, eventType="click")
+* Add Alt+<letter> shortcut support.  
+	e.g. ̲New -> Alt+N
+	<fs:Shortcut>
+		<s:ArrayList>		
+			<fs:BindKey target="{newButton}" optionKey="true" optionProperty="label"/>
+		</s:ArrayList>
+	</fs:Shortcut>
+	...
+	<s:Button id="newButton" label="@New" />
+		
++ Add letter instead of key code for shortcut. 
+  Uppercase letter automatically enable shift-key modifier. (keyEquivalent property)
+	e.g.
+	<fs:Shortcut>
+		<s:ArrayList>		
+			<fs:BindKey target="{newButton}" ctrl="true" keyEquivalent="n"/>
+		</s:ArrayList>
+	</fs:Shortcut>
+	
++ Add callback handler for shortcut. (handler property)
++ Add event and eventType properties for dispatch custom event. (by default event=MouseEvent, eventType="click")
 * Add common settings for binding keys. (ctrl, alt, shift, event, eventType and showKeysTip properties)
 	e.g.
 	<fs:Shortcut ctrl="true" eventType="click" showKeysTip="true">
@@ -21,4 +39,6 @@
 	
 * Add unit tests.
 * Add demonstration application. (in /example folder)
+* Move key names from class to xml file.
 * Improve README file.	
+* Improve ASDoc comments

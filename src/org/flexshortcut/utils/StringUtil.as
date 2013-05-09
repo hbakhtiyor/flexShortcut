@@ -19,6 +19,10 @@ package org.flexshortcut.utils
 		//  Methods
 		//
 		//--------------------------------------------------------------------------
+		
+		/**
+		 * 	@private
+		 */		
 		public static function humanize(string:String):String
 		{
 			if(!string) return "";
@@ -28,6 +32,5 @@ package org.flexshortcut.utils
 			
 			return string.charAt().toUpperCase() + string.substr(1);
 		}
-		
 	}
 }

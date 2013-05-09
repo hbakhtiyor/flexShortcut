@@ -30,6 +30,19 @@
 </fx:Declarations>
 ```
 
+`keyEquivalent` property
+
+```mxml
+<fx:Declarations>
+	<fs:Shortcut>
+		<s:ArrayList>		
+			<fs:BindKey target="{newButton}" ctrl="true" keyEquivalent="n"/>
+			<fs:BindKey target="{closeButton}" ctrl="true" keyEquivalent="q"/>
+		</s:ArrayList>
+	</fs:Shortcut>
+</fx:Declarations>
+```
+
 ## Dependencies
 
 * [*Flex Unit*](https://github.com/flexunit/flexunit)

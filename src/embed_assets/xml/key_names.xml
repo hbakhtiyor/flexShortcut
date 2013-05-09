@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<keys>
+	<!-- control keys  -->
+	<key id="1" 	code="" 	name="Ctrl" 		platforms="linux,windows"/>
+	<key id="2" 	code="" 	name="Ctrl" 		platform="mac"/>
+	<key id="3" 	code="" 	name="Shift" 		platforms="linux,windows"/>
+	<key id="4" 	code="" 	name="Shift" 		platform="mac"/>
+	<key id="5" 	code="" 	name="Alt" 			platforms="linux,windows"/>
+	<key id="6" 	code="" 	name="Alt" 			platform="mac"/>
+	
+	<!-- f keys -->
+	<key id="7" 	code="" 	name="F1" 			platforms="all"/>
+	<key id="8" 	code="" 	name="F2" 			platforms="all"/>
+	<key id="9" 	code="" 	name="F3" 			platforms="all"/>
+	<key id="10" 	code="" 	name="F4" 			platforms="all"/>
+	<key id="11" 	code="" 	name="F5" 			platforms="all"/>
+	<key id="12" 	code="" 	name="F6" 			platforms="all"/>
+	<key id="13" 	code="" 	name="F7" 			platforms="all"/>
+	<key id="14" 	code="" 	name="F8" 			platforms="all"/>
+	<key id="15" 	code="" 	name="F9" 			platforms="all"/>
+	<key id="16" 	code="" 	name="F10" 			platforms="all"/>
+	<key id="17" 	code="" 	name="F11" 			platforms="all"/>
+	<key id="18" 	code="" 	name="F12" 			platforms="all"/>
+	<key id="19" 	code="" 	name="F13" 			platforms="all"/>
+	<key id="20" 	code="" 	name="F14" 			platforms="all"/>
+	<key id="21" 	code="" 	name="F15" 			platforms="all"/>
+</keys>

@@ -1,44 +1,45 @@
 * Add Alt+<letter> shortcut support.  
 	e.g. ̲New -> Alt+N
-	<fs:Shortcut>
+	<fs:ShortcutKey>
 		<s:ArrayList>		
-			<fs:BindKey target="{newButton}" optionKey="true" optionProperty="label"/>
+			<fs:BindingKey target="{newButton}" optionKey="true" optionProperty="label"/>
 		</s:ArrayList>
-	</fs:Shortcut>
+	</fs:ShortcutKey>
 	...
 	<s:Button id="newButton" label="@New" />
 		
 + Add letter instead of key code for shortcut. 
   Uppercase letter automatically enable shift-key modifier. (keyEquivalent property)
 	e.g.
-	<fs:Shortcut>
+	<fs:ShortcutKey>
 		<s:ArrayList>		
-			<fs:BindKey target="{newButton}" ctrl="true" keyEquivalent="n"/>
+			<fs:BindingKey target="{newButton}" ctrl="true" keyEquivalent="n"/>
 		</s:ArrayList>
-	</fs:Shortcut>
+	</fs:ShortcutKey>
 	
 + Add callback handler for shortcut. (handler property)
 + Add event and eventType properties for dispatch custom event. (by default event=MouseEvent, eventType="click")
 * Add common settings for binding keys. (ctrl, alt, shift, event, eventType and showKeysTip properties)
 	e.g.
-	<fs:Shortcut ctrl="true" eventType="click" showKeysTip="true">
+	<fs:ShortcutKey ctrl="true" eventType="click" showKeysTip="true">
 		<s:ArrayList>		
-			<fs:BindKey target="{newButton}" key="{Keyboard.N}"/>
-			<fs:BindKey target="{closeButton}" key="{Keyboard.Q}"/>
+			<fs:BindingKey target="{newButton}" key="{Keyboard.N}"/>
+			<fs:BindingKey target="{closeButton}" key="{Keyboard.Q}"/>
 		</s:ArrayList>
-	</fs:Shortcut>
+	</fs:ShortcutKey>
 	
 	instead of
 		
-	<fs:Shortcut>
+	<fs:ShortcutKey>
 		<s:ArrayList>		
-			<fs:BindKey target="{newButton}" ctrl="true" key="{Keyboard.N}" showKeysTip="true" eventType="click" />
-			<fs:BindKey target="{closeButton}" ctrl="true" key="{Keyboard.Q}" showKeysTip="true" eventType="click" />
+			<fs:BindingKey target="{newButton}" ctrl="true" key="{Keyboard.N}" showKeysTip="true" eventType="click" />
+			<fs:BindingKey target="{closeButton}" ctrl="true" key="{Keyboard.Q}" showKeysTip="true" eventType="click" />
 		</s:ArrayList>
-	</fs:Shortcut>
+	</fs:ShortcutKey>
 	
 * Add unit tests.
 * Add demonstration application. (in /example folder)
 * Move key names from class to xml file.
 * Improve README file.	
-* Improve ASDoc comments
+* Improve ASDoc comments.
+* Disable browser shortcut keys if binding in flex components. (JavaScript)
